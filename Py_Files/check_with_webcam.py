@@ -2,7 +2,7 @@ from cv2 import *
 import face_recognition
 import os
 while (True):
-    if (os.path.isfile("flag.txt")):
+    if (os.path.isfile("C:\\Users\\malac\\Downloads\\flag.txt")):
         cam = VideoCapture(0)
 
         result, image = cam.read()
@@ -26,7 +26,7 @@ while (True):
                     f = open("return.txt", "w")
                     f.write(names[results.index(result)])
                     f.close()
-            os.remove("flag.txt")
+            os.remove("C:\\Users\\malac\\Downloads")
             os.remove("../Database/unknown.jpg")
 
         else:
