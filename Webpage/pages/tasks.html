@@ -8,8 +8,8 @@
     <body>
         <form action="" id = "userForm">
             <div class="alert">Added Task</div>
-            <fieldset style="background: #f6f8ff; border: 2px solid #4238ca;">
-              <legend>Add user</legend>
+            <fieldset style="background: #f6f8ff; border: 2px solid rgb(0, 255, 106);">
+              <legend>Add task</legend>
           
               <input id = "enterName" type="text" name="name" placeholder="Name"><br /><br />
               <input id = "enterAge" type="text" name="age" placeholder="Age"><br /><br />
@@ -20,19 +20,7 @@
             </fieldset>
           </form>
         </button>
-
-        <div class="checkbox-container">
-            <input type="checkbox" id="cb1">
-            <label for="cb1">Task 1</label>
-        </div>
-        <div class="checkbox-container">
-            <input type="checkbox" id="cb2">
-            <label for="cb2">Task 2</label>
-        </div>
-        <div class="checkbox-container">
-            <input type="checkbox" id="cb3">
-            <label for="cb3">Task 3</label>
-        </div>
+        <div id="task"></div>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="../scripts/mail.js"></script>
