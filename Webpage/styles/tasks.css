@@ -4,11 +4,7 @@
     cursor: pointer;
 }
 
-.checkbox__input {
-    display: alert('hi');
-    /*display: none; */
-}
-
-.checkbox__box {
-    
+input {
+    width: 250px;
+    text-align: center;
 }

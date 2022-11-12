@@ -13,11 +13,11 @@
                 <h1 class="form__title">Login</h1>
                     <div class="form__title form__message--error"></div>
                     <div class="form__input-group">
-                        <input type="text" class="form__input" autofocus placeholder="Username or email">
+                        <input id="username" type="text" class="form__input" autofocus placeholder="Username or email">
                         <div class="form__input-error-message"></div>
                     </div>
                     <div class="form__input-group">
-                        <input type="password" class="form__input form__input--error" autofocus placeholder="Password">
+                        <input id="password" type="password" class="form__input form__input--error" autofocus placeholder="Password">
                         <div class="form__input-error-message"></div>
                     </div>
                     <input type="submit" onclick="window.location.href='/Webpage/pages/tasks.html';" class="btn" value="Login"></input>
@@ -66,6 +66,11 @@
             var findAge = document.querySelector("#findAge");
             var findTask = document.querySelector("#findTask");
             var insertBtn = document.querySelector("#insert");
+            var username = document.querySelector("#username");
+            var password = document.querySelector("#password");
+
+            console.log(username);
+            console.log(password);
 
             function InsertData() {
                 set(ref(db, "users/"+ enterID.value),{
@@ -103,6 +108,8 @@
 
             insertBtn.addEventListener('click', InsertData);
             findBtn.addEventListener('click', FindData);
+            username.addEventListener('change', );
+
 
         </script>
     </body>
