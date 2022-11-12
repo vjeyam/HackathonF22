@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <link rel="stylesheet" href="./Webpage/styles/background_styles.css"> -->
-        <link rel="stylesheet" href="./Webpage/styles/tasks.css"> 
+        <!--<link rel="stylesheet" href="./Webpage/styles/background_styles.css">-->
+        <link rel="stylesheet" href="./styles/tasks.css"> 
         <title>Tasks</title>
     </head>
     <body>
+        <form action="" id = "userForm">
+            <div class="alert">Added Task</div>
+            <fieldset style="background: #f6f8ff; border: 2px solid #4238ca;">
+              <legend>Add user</legend>
+          
+              <input id = "enterName" type="text" name="name" placeholder="Name"><br /><br />
+              <input id = "enterAge" type="text" name="age" placeholder="Age"><br /><br />
+              <input id = "enterTask" type="text" name="task" placeholder="Task"><br /><br />
+              <input id = "enterID" type="text" name="id" placeholder="Id"><br /><br />
+          
+              <button type="submit" id = "insert">Submit</button>
+            </fieldset>
+          </form>
+        </button>
+
         <div class="checkbox-container">
             <input type="checkbox" id="cb1">
             <label for="cb1">Task 1</label>
@@ -19,4 +34,6 @@
             <label for="cb3">Task 3</label>
         </div>
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
 </html>
