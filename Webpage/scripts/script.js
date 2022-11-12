@@ -24,7 +24,9 @@ async function createFile() {
     var blob = new Blob(["Welcome to Home Task Manager"],
         { type: "text/plain;charset=utf-8" });
         saveAs(blob, "flag.txt");
-    await new Promise(r => setTimeout(r, 10000));
+        
+    await new Promise(r => setTimeout(r, 10));
+    console.log("saved");
     loadResults();
 }
 
@@ -32,6 +34,7 @@ async function createFile() {
 async function loadResults(){
     const response = await fetch("returns.txt");
     const data = await response.text();
+    console.log("hello");
     console.log(data);
 }
 
