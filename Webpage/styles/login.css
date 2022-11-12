@@ -12,14 +12,14 @@ body {
     align-items: center;
     justify-items: center;
     font-size: 18px;
-    background-color: grey;
+    background: url("../images/background1.jpg");
     background-size: cover;
 }
 
 .container {
-    width: 400px;
+    width: 500px;
     max-width: 400px;
-    margin: 7rem;
+    margin: 13rem;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
