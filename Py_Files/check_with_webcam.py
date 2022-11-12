@@ -25,7 +25,9 @@ while (True):
             #print(results)
             for result in results:
                 if (result):
-                    print(names[results.index(result)])
+                    print("\n\n")
+                    print("FaceID user id: " + names[results.index(result)])
+                    print("\n\n")
                     f = open("../Webpage/scripts/returns.txt", "w")
                     f.write(names[results.index(result)])
                     f.close()
