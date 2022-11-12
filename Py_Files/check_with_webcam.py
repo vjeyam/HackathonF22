@@ -1,6 +1,9 @@
+from datetime import time
 from cv2 import *
 import face_recognition
 import os
+import time
+
 while (True):
     if (os.path.isfile("C:\\Users\\malac\\Downloads\\flag.txt")):
         cam = VideoCapture(0)
@@ -23,11 +26,12 @@ while (True):
             for result in results:
                 if (result):
                     print(names[results.index(result)])
-                    f = open("return.txt", "w")
+                    f = open("../Webpage/scripts/returns.txt", "w")
                     f.write(names[results.index(result)])
                     f.close()
-            os.remove("C:\\Users\\malac\\Downloads")
+            os.remove("C:\\Users\\malac\\Downloads\\flag.txt")
             os.remove("../Database/unknown.jpg")
+            time.sleep(10)
 
         else:
             print("Error: No image")
