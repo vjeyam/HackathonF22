@@ -16,6 +16,16 @@ function clearInputError(inputElement) {
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
 
+function goPython() {
+    $.ajax({
+        type: "/post",
+        url: "../../Py_Files/check_with_webcam.py",
+        data: {}
+      }).done(function( o ) {
+         console.log('finished script');
+      });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
