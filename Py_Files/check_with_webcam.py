@@ -13,7 +13,7 @@ if result:
     unknown_image = face_recognition.load_image_file("../Database/unknown.jpg")
     unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
     known_encodings = []
-    for name in ["malachi", "daijon", "cade", "pranav"]:
+    for name in ["malachi", "daijon", "cade", "pranav", "vishal"]:
         print(name)
         known_image = face_recognition.load_image_file("../Database/" + name + ".jpg")
         known_encodings.append(face_recognition.face_encodings(known_image)[0])
