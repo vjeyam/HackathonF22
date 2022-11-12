@@ -30,5 +30,80 @@
         </form>
     </div>
     <script src="/Webpage/scripts/script.js"></script>
+        <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAzdYLzh4_-QCZhU_dvtrqA-UkJOj9Q6xc",
+          authDomain: "hometaskmanager-c91ac.firebaseapp.com",
+          databaseURL: "https://hometaskmanager-c91ac-default-rtdb.firebaseio.com",
+          projectId: "hometaskmanager-c91ac",
+          storageBucket: "hometaskmanager-c91ac.appspot.com",
+          messagingSenderId: "604698769278",
+          appId: "1:604698769278:web:570118de5aa15c8cf6a52f",
+          measurementId: "G-1N2SL2TPM7"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import {getDatabase, set, get, update, remove, ref, child} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterAge = document.querySelector("#enterAge");
+        var enterTask = document.querySelector("#enterTask");
+        var findID = document.querySelector("#findID");
+        var findName = document.querySelector("#findName");
+        var findAge = document.querySelector("#findAge");
+        var findTask = document.querySelector("#findTask");
+        var insertBtn = document.querySelector("#insert");
+
+        function InsertData() {
+            set(ref(db, "users/"+ enterID.value),{
+                Name: enterName.value,
+                ID: enterID.value,
+                Age: enterAge.value,
+                Task: enterTask.value
+            })
+            .then(()=>{
+                alert("Data added successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+        function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "users/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                    findTask.innerHTML = "Task: " + snapshot.val().Task;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+
+        insertBtn.addEventListener('click', InsertData);
+        findBtn.addEventListener('click', FindData);
+
+      </script>
 </body>
 </html>
