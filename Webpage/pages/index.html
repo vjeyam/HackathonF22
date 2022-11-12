@@ -4,6 +4,7 @@
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Login / Sign Up Form</title>
+        <!-- <h1>Welcome to Home Manager</h1> -->
         <link rel="shortcut icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="../styles/login.css">
     </head>
@@ -20,15 +21,15 @@
                         <input id="password" type="password" class="form__input form__input--error" autofocus placeholder="Password">
                         <div class="form__input-error-message"></div>
                     </div>
-                    <input type="submit" onclick="window.location.href='/Webpage/pages/tasks.html';" class="btn" value="Login"></input>
+                    <input type="submit" onclick="window.location.href='../pages/tasks.html';" class="btn" value="Login"></input>
                     <script src="../scripts/FileSaver.js"></script>
                     <input type="submit" onclick="createFile()" class="face" value="Face ID"></input>
-                    <p class="form__text">
+                    <!-- <p class="form__text">
                         <a href="#" class="form__link">Forgot your password?</a>
                     </p>
                     <p class=""form__text>
                         <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account.</a>
-                    </p>
+                    </p> -->
             </form>
         </div>
         <script src="../scripts/script.js"></script>
@@ -110,7 +111,7 @@
 
             insertBtn.addEventListener('click', InsertData);
             findBtn.addEventListener('click', FindData);
-            username.addEventListener('change', );
+            // username.addEventListener('change', );
 
 
         </script>

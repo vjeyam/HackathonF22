@@ -30,9 +30,9 @@ async function createFile() {
 
 
 async function loadResults(){
-    const response = await fetch("../../Py_Files/returns.txt");
+    const response = await fetch("returns.txt");
     const data = await response.text();
-    console.log("data")
+    console.log(data);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
