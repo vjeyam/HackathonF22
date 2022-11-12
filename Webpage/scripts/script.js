@@ -1,1 +1,1 @@
-alert('burger king foot lettuce');
+// alert('burger king foot lettuce');
