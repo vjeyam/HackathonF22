@@ -43,8 +43,18 @@
     content: '\002714';
     background-color: #27AE60;
     display: flex;
-    justirfy-content: center;
+    justify-content: center;
     align-items: cetner;
     color: white;
 }
 
+.alert {
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display:none;
+}
