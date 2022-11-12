@@ -5,5 +5,10 @@
 }
 
 .checkbox__input {
-    display:alert('hi');
+    display: alert('hi');
+    /*display: none; */
+}
+
+.checkbox__box {
+    
 }
