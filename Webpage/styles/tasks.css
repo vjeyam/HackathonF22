@@ -38,16 +38,7 @@
     transform: scale(1);
 }
 
-.checkbox-contatiner input[type='checkbox']:checked + label::before {
-    content: '\002714';
-    background-color: #27AE60;
-    display: flex;
-    justify-content: center;
-    align-items: cetner;
-    color: white;
-}
-
-.alert {
+.alert{
     width: 100%;
     background: rgb(0, 255, 106);
     padding: 10px 20px;
@@ -55,5 +46,14 @@
     text-align: center;
     font-size: 18px;
     font-weight: 900;
-    display:none;
+    display: none;
+}
+
+.box {
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
