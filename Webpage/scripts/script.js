@@ -16,14 +16,23 @@ function clearInputError(inputElement) {
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
 
-function goPython() {
-    $.ajax({
-        type: "/post",
-        url: "../../Py_Files/check_with_webcam.py",
-        data: {}
-      }).done(function( o ) {
-         console.log('finished script');
-      });
+
+
+async function createFile() {
+
+    
+    var blob = new Blob(["Welcome to Home Task Manager"],
+        { type: "text/plain;charset=utf-8" });
+        saveAs(blob, "flag.txt");
+    await new Promise(r => setTimeout(r, 10000));
+    loadResults();
+}
+
+
+async function loadResults(){
+    const response = await fetch("../../Py_Files/returns.txt");
+    const data = await response.text();
+    console.log("data")
 }
 
 document.addEventListener("DOMContentLoaded", () => {
