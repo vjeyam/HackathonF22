@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Database for [User]</title>
+        <title>Login Page</title>
         <link rel="stylesheet" href="/Webpage/styles/styles.css">
     </head>
     <body>
+        <div id="login">
+            <h3>Login:</h3>
+            <form method="post">
+                <div class="user_field">
+                    <label>Username:</label>
+                    <input type="text" required>                    
+                </div>
+            </form>
+            <form method="post">
+                <div class="pass_field">
+                    <label>Password:</label>
+                    <input type="text" required>
+                </div>
+            </form>
+            <button class="LoginButton">Submit</button>
+            <div class="ForgotPassword">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="SignUp">
+                <a href="#">Don't have an account? Sign up</a>
+            </div>
+        </div>
         <script src="/Webpage/scripts/script.js"></script>
-        <h1>These are the tasks for [User]</h1>
-        <ul>
-            <li>task 1</li>
-            <li>task 2</li>
-            <li>task 3</li>
-            <li>task 4</li>
-        </ul>
     </body>
 </html>
