@@ -3,7 +3,7 @@
     <head>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>Login / Sign Up Form</title>
+        <title>Login Form</title>
         <!-- <h1>Welcome to Home Manager</h1> -->
         <link rel="shortcut icon" href="/assets/favicon.ico">
         <link rel="stylesheet" href="../styles/login.css">
@@ -14,16 +14,18 @@
                 <h1 class="form__title">Login</h1>
                     <div class="form__title form__message--error"></div>
                     <div class="form__input-group">
-                        <input id="username" type="text" class="form__input" autofocus placeholder="Username or email">
+                        <!-- <input id="username" type="text" class="form__input" autofocus placeholder="Username or email"> -->
                         <div class="form__input-error-message"></div>
                     </div>
                     <div class="form__input-group">
-                        <input id="password" type="password" class="form__input form__input--error" autofocus placeholder="Password">
+                        <!-- <input id="password" type="password" class="form__input form__input--error" autofocus placeholder="Password"> -->
                         <div class="form__input-error-message"></div>
                     </div>
-                    <input type="submit" onclick="window.location.href='../pages/tasks.html';" class="btn" value="Login"></input>
-                    <script src="../scripts/FileSaver.js"></script>
-                    <input type="submit" onclick="createFile()" class="face" value="Face ID"></input>
+                    <a href="../pages/tasks.html">
+                        <input type="button" class="btn" value="Face ID"></input>
+                    </a>
+                    <!-- <script src="../scripts/FileSaver.js"></script> -->
+                    <!-- <input type="submit" onclick="createFile()" class="face" value="Face ID"></input> -->
                     <!-- <p class="form__text">
                         <a href="#" class="form__link">Forgot your password?</a>
                     </p>

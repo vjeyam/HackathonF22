@@ -119,3 +119,7 @@ body {
 .form__link:hover {
     text-decoration: underline;
 }
+
+.btn {
+    padding-top: 50%;
+}
